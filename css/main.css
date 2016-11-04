@@ -77,21 +77,37 @@ input {
   color: white;
 }
 
+#imgBlock {
+  text-align: center;
+}
+
 #overlay img {
   width: 600px;
+  height: auto;
   box-shadow: 0 0 2em #aaa;
 }
 
 #overlay .arrow {
   width: 30px;
+  opacity: .8;
 }
 
-#overlay #close {
+#close {
   width: 20px;
+}
+
+#close:hover,
+#prev:hover,
+#next:hover {
+  box-shadow: 1px 2px 3px;
+  transition: .5s;
+  cursor: pointer;
 }
 
 #overlay p {
   font-size: 1.1em;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 
@@ -103,6 +119,38 @@ input {
   #photoGallery li {
     width: 28.3333%;
   }
+
+  #imgBlock {
+    border: 1px solid blue;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  #overlay p {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  #close {
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  #prev {
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+  }
+
+  #next {
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -112,5 +160,10 @@ input {
   }
   #photoGallery li {
     width: 20%;
+  }
+
+  #overlay p {
+    margin-left: 30%;
+    margin-right: 30%;
   }
 }

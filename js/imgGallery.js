@@ -85,6 +85,7 @@ $('body').append($overlay);
   $prevArrow.click(function() {
     // Show the previous image
     showImage($('.active').eq(objectPosition - 1).children('a'));
+
   });
 
   // When nextArrow is clicked
