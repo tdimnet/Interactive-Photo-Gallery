@@ -7,10 +7,6 @@ $prevArrow = $('<img id="prev" class="arrow" src="img/prev.png" alt="See the pre
 $nextArrow = $('<img id="next" class="arrow" src="img/next.png" alt="See the next image">');
 $imageCaption = $('<p></p>');
 
-// Tracking variables
-var objectPosition;
-var activeObjects;
-
 
 
 // Creating the functions
@@ -85,7 +81,6 @@ $('body').append($overlay);
   $prevArrow.click(function() {
     // Show the previous image
     showImage($('.active').eq(objectPosition - 1).children('a'));
-
   });
 
   // When nextArrow is clicked
@@ -96,12 +91,10 @@ $('body').append($overlay);
 
 
 
-// WARNING
-  // Still some issues with the keydown event !
   $(document).keydown(function(event) {
-    if (event.which === 37) {
+    if ((event.which === 37) && (objectPosition !== 0)) {
       showImage($('.active').eq(objectPosition - 1).children('a'));
-    } else if (event.which === 39) {
+    } else if (event.which === 39 &&  (objectPosition != ($('.active').length - 1))) {
       showImage($('.active').eq(objectPosition + 1).children('a'));
     } else if (event.which === 27) {
       $overlay.fadeOut('400');

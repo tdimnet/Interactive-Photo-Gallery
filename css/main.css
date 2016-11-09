@@ -121,7 +121,6 @@ input {
   }
 
   #imgBlock {
-    border: 1px solid blue;
     width: 600px;
     margin-left: auto;
     margin-right: auto;
