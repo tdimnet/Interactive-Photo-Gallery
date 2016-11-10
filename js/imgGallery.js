@@ -1,12 +1,15 @@
 // Creating the variables
-$overlay = $('<div id="overlay"></div>');
-$imageBlock = $('<div id="imgBlock"></div>');
-$image = $('<img>');
-$closeArrow = $('<img id="close" class="arrow" src="img/close.png" alt="Close the overlay">');
-$prevArrow = $('<img id="prev" class="arrow" src="img/prev.png" alt="See the previous image">');
-$nextArrow = $('<img id="next" class="arrow" src="img/next.png" alt="See the next image">');
-$imageCaption = $('<p></p>');
+var $overlay = $('<div id="overlay"></div>');
+var $imageBlock = $('<div id="imgBlock"></div>');
+var $image = $('<img>');
+var $closeArrow = $('<img id="close" class="arrow" src="img/close.png" alt="Close the overlay">');
+var $prevArrow = $('<img id="prev" class="arrow" src="img/prev.png" alt="See the previous image">');
+var $nextArrow = $('<img id="next" class="arrow" src="img/next.png" alt="See the next image">');
+var $imageCaption = $('<p></p>');
 
+// Tracking variables
+var objectPosition;
+var activeObjects;
 
 
 // Creating the functions

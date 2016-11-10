@@ -9,9 +9,9 @@
     $('#photoGallery a img').each(function() {
 
       // Convert both img's attributes in lower cases
-      imgAlt = $(this).attr('alt').toLowerCase();
-      imgTitle = $(this).attr('Title').toLowerCase();
-      imgInfo = imgAlt + ' ' + imgTitle;
+      var imgAlt = $(this).attr('alt').toLowerCase();
+      var imgTitle = $(this).attr('Title').toLowerCase();
+      var imgInfo = imgAlt + ' ' + imgTitle;
 
       // Remove the images when the search does not match
       if (imgInfo.indexOf(searchWord) === -1) {
